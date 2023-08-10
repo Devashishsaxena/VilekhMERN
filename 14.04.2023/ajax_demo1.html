@@ -1,0 +1,52 @@
+<html>
+
+<head>
+  <title>AJAX Demo</title>
+  <script>
+
+    function ajaxDemo() {
+      var xhttp = new XMLHttpRequest();
+      xhttp.open("GET", "https://jsonplaceholder.typicode.com/posts", true);
+      xhttp.send();
+
+      xhttp.onreadystatechange = function () {
+        if (xhttp.readyState == 4 && xhttp.status == 200) {
+          var users = JSON.parse(xhttp.responseText);
+          var userTable =
+            ` <h1>View & Manage User Details</h1>
+    <table border='1'>
+      <tr>
+        <th>UserID</th>
+        <th>ID</th>
+        <th>Title</th>
+        <th>Body</th>
+        </tr>
+        `
+          users.map((row) => {
+            userTable += "<tr>";
+            userTable += ("<td>" + row.userId + "</td>");
+            userTable += ("<td>" + row.id + "</td>");
+            userTable += ("<td>" + row.title + "</td>");
+            userTable += ("<td>" + row.body + "</td>");
+            userTable += "</tr>";
+          });
+
+          userTable += "</table>";
+
+          document.getElementById("response").innerHTML = userTable;
+        }
+      }
+
+    }
+
+  </script>
+</head>
+
+<body>
+
+  <button onclick="ajaxDemo()">Click to make AJAX work</button>
+  <div id="response"></div>
+
+</body>
+
+</html>

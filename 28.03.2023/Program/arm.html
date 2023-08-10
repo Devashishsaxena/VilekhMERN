@@ -1,0 +1,11 @@
+<script>
+var n=999,i,r,sum=0;
+for(i=n; i>0; i=parseInt(i/10))
+{
+    r=i%10;
+    sum=Math.pow(r,3)+sum;
+
+}
+document.write(sum);
+(sum==n)?document.write("<br>"+"armstrong"):document.write(" not armstrong");
+</script>

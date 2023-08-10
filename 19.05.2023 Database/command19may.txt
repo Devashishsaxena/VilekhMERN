@@ -1,0 +1,181 @@
+(base) administrator@LAP4:~$ sudo service mongod start
+[sudo] password for administrator: 
+(base) administrator@LAP4:~$ mongo
+MongoDB shell version v4.0.28
+connecting to: mongodb://127.0.0.1:27017/?gssapiServiceName=mongodb
+Implicit session: session { "id" : UUID("aea2fa5c-2adb-4f59-a04e-084bcdfe7dc3") }
+MongoDB server version: 4.0.28
+Server has startup warnings: 
+2023-05-19T09:47:15.237+0530 I STORAGE  [initandlisten] 
+2023-05-19T09:47:15.237+0530 I STORAGE  [initandlisten] ** WARNING: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine
+2023-05-19T09:47:15.237+0530 I STORAGE  [initandlisten] **          See http://dochub.mongodb.org/core/prodnotes-filesystem
+2023-05-19T09:47:16.613+0530 I CONTROL  [initandlisten] 
+2023-05-19T09:47:16.613+0530 I CONTROL  [initandlisten] ** WARNING: Access control is not enabled for the database.
+2023-05-19T09:47:16.613+0530 I CONTROL  [initandlisten] **          Read and write access to data and configuration is unrestricted.
+2023-05-19T09:47:16.613+0530 I CONTROL  [initandlisten] 
+---
+Enable MongoDB's free cloud-based monitoring service, which will then receive and display
+metrics about your deployment (disk utilization, CPU, operation statistics, etc).
+
+The monitoring data will be available on a MongoDB website with a unique URL accessible to you
+and anyone you share the URL with. MongoDB may use this information to make product
+improvements and to suggest MongoDB products and deployment options to you.
+
+To enable free monitoring, run the following command: db.enableFreeMonitoring()
+To permanently disable this reminder, run the following command: db.disableFreeMonitoring()
+---
+
+> 
+> use stackbatch910-17may
+switched to db stackbatch910-17may
+> show collections
+data
+data1
+empDetails
+> db.data.find().pretty()
+{
+	"_id" : ObjectId("64645a6501ccffe15a8f5607"),
+	"rno" : 1001,
+	"name" : "jarvis",
+	"phy" : 56,
+	"che" : 67,
+	"mat" : 78
+}
+{
+	"_id" : ObjectId("64645a7b01ccffe15a8f5608"),
+	"rno" : 1002,
+	"name" : "jany",
+	"phy" : 16,
+	"che" : 61,
+	"mat" : 17
+}
+{
+	"_id" : ObjectId("64645aaf01ccffe15a8f5609"),
+	"rno" : 1003,
+	"name" : "john",
+	"phy" : 61,
+	"che" : 91,
+	"mat" : 87
+}
+{
+	"_id" : ObjectId("64645aaf01ccffe15a8f560a"),
+	"rno" : 1004,
+	"name" : "peter",
+	"phy" : 98,
+	"che" : 1,
+	"mat" : 71
+}
+{
+	"_id" : ObjectId("64645b1101ccffe15a8f560b"),
+	"rno" : 1005,
+	"name" : "test",
+	"phy" : 6,
+	"che" : 9,
+	"mat" : 7
+}
+{
+	"_id" : ObjectId("64645b9a01ccffe15a8f560c"),
+	"rno" : 1006,
+	"name" : "jay",
+	"phy" : 18,
+	"che" : 80,
+	"mat" : 55
+}
+{
+	"_id" : ObjectId("64645b9a01ccffe15a8f560d"),
+	"rno" : 1007,
+	"name" : "test4",
+	"phy" : 18,
+	"che" : 92,
+	"mat" : 75
+}
+{
+	"_id" : ObjectId("64645c1701ccffe15a8f560e"),
+	"rno" : 1008,
+	"name" : "test",
+	"mat" : 7
+}
+{ "_id" : 1009, "name" : "aaa", "phy" : 56, "che" : 78, "mat" : 54 }
+> 
+> db.data.update({"rno":1001},{$set:{"phy":50,"che":50}})
+WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
+> db.data.find({"rno":1001}).pretty()
+{
+	"_id" : ObjectId("64645a6501ccffe15a8f5607"),
+	"rno" : 1001,
+	"name" : "jarvis",
+	"phy" : 50,
+	"che" : 50,
+	"mat" : 78
+}
+> db.data.update({$or:[{"rno":1002},{"rno":1005}]},{$set:{"mat":80}})
+WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
+> db.data.updateOne({$or:[{"rno":1002},{"rno":1005}]},{$set:{"mat":81}})
+{ "acknowledged" : true, "matchedCount" : 1, "modifiedCount" : 1 }
+> 
+> db.data.updateMany({$or:[{"rno":1002},{"rno":1005}]},{$set:{"mat":82}})
+{ "acknowledged" : true, "matchedCount" : 2, "modifiedCount" : 2 }
+> db.data.updateMany({$or:[{"rno":1021},{$set:{"mat":90,"phy":54,"che":21,"name":"xyz"}})
+... 
+... 
+> 
+> db.data.update({"rno":1002},{"rno":1005}]},{$set:{"mat":82}})
+
+2023-05-19T09:57:27.992+0530 E QUERY    [js] SyntaxError: missing ) after argument list @(shell):1:40
+> db.data.update({"rno":1021},{$set:{"phy":52,"che":51,"mat":78}})
+WriteResult({ "nMatched" : 0, "nUpserted" : 0, "nModified" : 0 })
+> db.data.update({"rno":1021},{$set:{"phy":52,"che":51,"mat":78}},)
+> db.data.update({"rno":1021},{$set:{"phy":52,"che":51,"mat":78}},upsert=true)
+WriteResult({
+	"nMatched" : 0,
+	"nUpserted" : 1,
+	"nModified" : 0,
+	"_id" : ObjectId("6466fb1d68dc1b72955375fc")
+})
+> db.data.find({"rno":1021}).pretty()
+{
+	"_id" : ObjectId("6466fb1d68dc1b72955375fc"),
+	"rno" : 1021,
+	"che" : 51,
+	"mat" : 78,
+	"phy" : 52
+}
+> 
+
+> db.data.re({"rno":1021}).pretty()
+db.data.reIndex(           db.data.renameCollection(
+db.data.remove(            db.data.replaceOne(
+> db.data.remove({"rno":1021})
+WriteResult({ "nRemoved" : 1 })
+> db.data.remove({"rno":1021})
+
+
+
+
+
+
+
+
+
+
+
+
+> db.data.remove({$or:[{"rno":1002},{"rno":1005}]})
+WriteResult({ "nRemoved" : 2 })
+> db.data.remove({$or:[{"rno":1002},{"rno":1005}]})
+WriteResult({ "nRemoved" : 0 })
+> db.data1.drop()
+true
+> 
+
+
+
+
+
+
+
+
+
+
+
+

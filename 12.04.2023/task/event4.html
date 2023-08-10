@@ -1,0 +1,35 @@
+<html>
+<head>
+    <title>Event Demo 4</title>
+    <script>
+        function zoom(z) {
+            if (z == "in") {
+                var img = document.getElementById("myimg");
+                var w = img.width;
+                var h = img.height;
+                img.width = w + 50;
+                img.height = h + 50;
+            }
+
+            else if (z == "out") {
+                var img = document.getElementById("myimg");
+                var w = img.width;
+                var h = img.height;
+                img.width = w - 50;
+                img.height = h - 50;
+            }
+
+        }
+
+    </script>
+</head>
+<body>
+    <img id="myimg" src="./images/img1.png" width="200" height="200" />
+    <br><br><br><br>
+    <button onclick="zoom('in')">Zoom In</button>
+    <button onclick="zoom('out')">Zoom Out</button>
+
+
+</body>
+
+</html>

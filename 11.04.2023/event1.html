@@ -1,0 +1,22 @@
+<html>
+<head>
+<title>Event Demo</title>
+<script>
+
+function changeColor(c)
+{ 
+ var obj=document.getElementsByTagName("body");
+ //alert(obj[0]);
+ obj[0].style.backgroundColor=c;
+}
+
+</script>
+</head>
+<body>
+
+<button onclick="changeColor('red')" >Red</button>
+<button onclick="changeColor('green')" >Green</button>
+<button onclick="changeColor('blue')" >Blue</button>
+
+</body>
+</html>

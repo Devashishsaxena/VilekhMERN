@@ -1,0 +1,16 @@
+<script>
+//Fat arrow or Lamda expression function
+document.write("<h1>Before function execution</h1>");
+
+(()=>{
+ document.write("<h1>Fat arrow invoked</h1>");
+})();
+
+((a,b)=>{
+ var c=a+b;
+ document.write("<h1>Fat arrow invoked , add="+c+"</h1>");
+})(10,20);
+
+
+document.write("<h1>After function execution</h1>");
+</script>

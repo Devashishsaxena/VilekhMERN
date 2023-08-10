@@ -1,0 +1,3 @@
+1) red , green , blue ColorChange in h1 text message is [ This is animatic text].
+2) Zoom in ,Zoom Out Images in increment++ in 50px , Decrement-- in 50px and img 
+default hight and width is 200px & 200px    

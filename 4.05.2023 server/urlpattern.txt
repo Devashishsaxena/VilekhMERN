@@ -1,0 +1,16 @@
+url pattern :-
+
+http://localhost:8081   /contact/p1/p2/...
+        s1                      s2
+
+?username=admin&password=admin123
+            s3
+
+s1 : Domain
+s2 : url path (routing must be done using path)        
+s3 : data attached with url (query string)
+
+req.url = s2+s3
+
+Routing must be done as per url path, to extract
+url from path url must be parsed  

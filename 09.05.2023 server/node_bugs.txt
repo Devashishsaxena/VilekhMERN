@@ -1,0 +1,12 @@
+Node Implementational Bugs :-
+
+-> Manual management of request & response
+
+-> Manual management of response header
+
+-> Manual url parsing & method checking
+
+-> Unavaibility of template pages
+UI page = client side code + server side code
+
+-> Problem in static files loading (images , css , js......) 

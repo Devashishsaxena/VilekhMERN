@@ -1,0 +1,9 @@
+window install :-
+
+url : https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-windows/#install-mongodb-community-edition
+
+
+joins :
+
+https://hevodata.com/learn/mongodb-join-two-collections/
+

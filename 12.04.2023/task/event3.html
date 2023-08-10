@@ -1,0 +1,18 @@
+<html>
+<head>
+<title>Event Demo3</title>
+<script>
+function changeColor(c)
+{
+var obj=document.getElementsByTagName("body");
+obj[0].style.color = c;
+}
+</script>
+</head>
+<body>
+<h1>This is animating text</h1>
+<button onclick="changeColor('red')">Red</button>
+<button onclick="changeColor('blue')">Blue</button>
+<button onclick="changeColor('green')">Green</button>
+</body>
+</html>

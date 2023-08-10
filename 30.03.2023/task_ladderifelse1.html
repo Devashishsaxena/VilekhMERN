@@ -1,0 +1,29 @@
+<script>
+//WAP for cross case conversion
+
+var ch=prompt("Enter a character for cross case conversion");
+
+document.write("<h1>Before changes:"+ch+"</h1>");
+
+if(ch>='A' && ch<='Z')
+{
+ document.write("<h1>Uppercase</h1>");
+ ch=String.fromCharCode(ch.charCodeAt()+32);
+} 
+else if(ch>='a' && ch<='z')
+{
+ document.write("<h1>Lowercase</h1>");
+ ch=String.fromCharCode(ch.charCodeAt()-32);
+} 
+else
+{
+ document.write("<h1>Invalid character input</h1>");
+} 
+
+document.write("<h1>After changes:"+ch+"</h1>");
+ 
+</script>
+
+
+
+

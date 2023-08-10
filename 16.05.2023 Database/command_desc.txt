@@ -1,0 +1,21 @@
+Command to create collections :-
+
+-> Uncapped collection : A collection without any restrictions are uncapped collections
+
+syntax : db.createCollection("collection_name")  
+
+-> Capped collection : A collection with restrictions are capped collections , where restriction can be related to total number of document stored , total size of collection etc  
+
+syntax : db.createCollection("collection_name",{max:'' , size:'' , capped:''})
+
+max : specify max document which will be inserted in collection
+
+size : total size of collection in bytes
+
+capped : to make collection capped , its value must be true  
+
+
+
+
+
+

@@ -1,0 +1,14 @@
+<script>
+     var n, i, a = 0, sum = 0;
+        for (n = 1; n <= 100; n++) {
+            for (i = n; i > 0; i++)
+                a++;
+            for (i = n; i > 0; i = i / 10) {
+                r = i % 10;
+                p = Math.pow(r, a);
+                sum = sum + p;
+            }
+            if (sum == n)
+                document.write(n);
+        }
+</script>

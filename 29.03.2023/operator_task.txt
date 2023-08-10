@@ -1,0 +1,7 @@
+Operator task : ternary
+
+-> WAP to check a 3-digit number is armstrong or not
+
+-> WAP to check a 3-digit number is palindrome or not
+
+-> WAP to check a single character string is uppercase or lowercase  

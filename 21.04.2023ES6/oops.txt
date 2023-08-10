@@ -1,0 +1,69 @@
+oops : It stands for object oreinted programming style or structure , it is a way to make programming implementation to apply code reusability , reimplementation , application level security & modularity at application level.
+		To deploy above implementations oops features are used :-
+
+Features of OOPS
+
+-> Encapsulation
+-> Abstraction
+-> Polymorphism
+-> Inheritance
+
+------------------------------------------------------
+------------------------------------------------------
+
+Object :- 
+
+-> It is real world entity : Those entity which have its own state , data composition is real world entity
+
+state:data composition:properties -> machine , accessories , body (data member)
+
+car : object 
+
+behaviour:functionality -> it moves (member method) 
+
+eg: ar : array object (ar.length , ar.reverse())
+
+
+------------------------------------------------------
+
+-> It is run time entity : When a object will traverse from one location to another it will carry its state & behaviour with it hence considered as run time entity
+
+------------------------------------------------------
+
+-> It is instance of class : A class will come in existance if object of class is created & object is blue print of class implementation (result)
+
+------------------------------------------------------
+------------------------------------------------------
+
+Class :-
+
+-> It is collection of similar type of object : A class will come in existance when object is created , all object generated for same class will be of similar type (comman state & behaviour)
+
+-> It is collection of data member & member method
+
+------------------------------------------------------
+------------------------------------------------------
+
+syntax for class :-
+
+class ClassName
+{
+ data member
+ member methods 
+}
+
+syntax for object :-
+
+var object_name = new ClassName();
+
+------------------------------------------------------
+------------------------------------------------------
+
+
+
+
+
+
+   
+
+

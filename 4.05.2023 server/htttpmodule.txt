@@ -1,0 +1,7 @@
+http module : this module is used to generate 
+server side implementation for web based application.
+
+This module comes with multiple function use to access , handle server 
+side for web based application. 
+
+note : level 1 dependency

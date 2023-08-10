@@ -1,0 +1,17 @@
+<script>
+//JS objects
+
+var emp={"eno":1001,"enm":"Jarvis","esal":10000.56};
+
+document.write("<h1>Employee Details Loop Access</h1>");
+for(let k in emp)
+ document.write(k+"---->"+emp[k]+"<br>"); 
+
+document.write("<h1>Employee Details Manual Access</h1>");
+document.write("Eno : "+emp["eno"]+"<br>");
+document.write("Enm : "+emp["enm"]+"<br>");
+document.write("Esal : "+emp.esal+"<br>");
+
+</script>
+
+

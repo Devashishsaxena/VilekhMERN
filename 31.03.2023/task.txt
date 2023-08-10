@@ -1,0 +1,16 @@
+Loops :-------
+
+-> WAP to print table of a given number using while loop
+
+-> WAP to print factorial of given number using for loop
+
+-> WAP to print fabonacii series upto first 25 elements
+{hint : 0 1 1 2 3 5 8 13 21 ........ n elements}
+
+-> WAP to print fabonacii series upto value limit
+100000
+
+-> WAP to check entered n-digit number is palindrome or not
+
+-> WAP to check entered n-digit number is armstrong or not
+

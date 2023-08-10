@@ -1,0 +1,72 @@
+<html>
+<head>
+<title>Event Demo</title>
+
+<style>
+#main
+{
+ height:400px;
+ width:600px;
+ border:2px solid black;
+}
+#main_part1
+{
+ height:250px;
+}
+#main_part1 img
+{
+ margin-top:25px;
+ border:2px solid black;
+}
+
+#main_part2
+{
+ height:150px;
+}
+
+#main_part2 img
+{
+ margin:10px 10px 0 10px;
+ border:2px solid black;
+}
+
+</style>
+
+<script>
+
+function changeImage(s)
+{
+ document.getElementById("mainimg").src=s;
+}
+
+/*function reloadChange()
+{
+ window.location="event2.html";
+}*/
+
+</script>
+
+</head>
+<body>
+<center>
+<h1>Image Gallary</h1>
+<div id="main">
+<div id="main_part1">
+<img id="mainimg" src="./images/img1.png" height="200" width="400" />
+</div>
+<hr/>
+<div id="main_part2">
+
+<img onmouseenter="changeImage(this.src)" onmouseleave="reloadChange()" src="./images/img2.png" height="100" width="100" />
+
+<img onmouseenter="changeImage(this.src)" onmouseleave="reloadChange()" src="./images/img3.jpeg" height="100" width="100" />
+
+<img onmouseenter="changeImage(this.src)" onmouseleave="reloadChange()" src="./images/img4.jpeg" height="100" width="100" />
+
+<img onmouseenter="changeImage(this.src)" onmouseleave="reloadChange()" src="./images/img5.png" height="100" width="100" />
+
+</div>
+</div>
+</center>
+</body>
+</html>

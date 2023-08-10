@@ -1,0 +1,19 @@
+<script>
+    var s=prompt("enter any ch");
+    n=s.charCodeAt();
+    document.write("befor changes:"+s+"<br>");
+    if(s>="A" && s<="Z")
+       {
+       document.write("upper case string");
+       n+=32;
+       }
+    else if(s>="a" && s<="z")
+       {
+       document.write("lower case string");
+       n-=32;
+       }
+    else
+       document.write("invalid string");
+       s=String.fromCharCode(n);
+       document.write("<br>after changes:"+s);
+</script>

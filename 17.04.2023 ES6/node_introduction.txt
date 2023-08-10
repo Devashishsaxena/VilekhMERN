@@ -1,0 +1,72 @@
+Node : It is Javascript based server side development environment , used to develop server side for web based application , along with it , it is used to generate network based application.
+
+Node Development Environment :-
+
+web : https://nodejs.org/en/
+
+LTS : 18.16.0
+Current : 19.9.0
+
+Invented by Ryan Dahl in 2009
+
+-----------------------------------------------------------------------
+
+Features of NodeJS :-
+
+-> Open source : It means freely available , i.e all node environments , module , tools are free to use
+
+-> Platform independency : Node applications are platform independent , if provided with proper execution environment. But node environments are platform dependent.
+
+  Node App = Source code + App dependency or 				       modules 			
+
+-> Portable : Node application can be carried from one platform to another
+
+-> Modules or Dependency : It is collection of JS refrence variables , function or classes , this modules can be linked at application level if required & can be removed if not , modules can be generated as per users requirement & will be considered as custom modules.
+
+eg : fs , http , url , events , express , @angular/cli , create-react-app ........
+
+-> NPM : It stands for Node package manager , it is online repository which provide default support to node environment , those packages which are not in node env can be downloaded from NPM
+
+-> package.json : It is node application configuration file , used to store application configs like
+
+* app name
+* app version
+* test commands
+* list of dependency
+* author info
+
+-> Cross platform 
+
+-> Architecture neutral
+
+-> Object oreinted
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+ 
+
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+

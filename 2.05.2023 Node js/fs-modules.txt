@@ -1,0 +1,50 @@
+fs module :- It is file system module used to perform file handelling in 
+case of NodeJS.
+File is storage capable to store bulk amount of data at particular location 
+, this storages are permanent in nature. Capable to store & access data as 
+required. (level 1)
+
+-> File handelling using functions
+-> File handelling using streams
+
+-----------------------------------------------------------
+
+File Streams : Streams denotes to flow of data , used to transfer 
+data from one application end to another end. 
+This is used for end to end data transmisions. 
+Streams are considered as fastest mechanism to manage content.
+
+-> Types of streams
+
+* readable stream
+* writable stream
+* duplex stream
+* transform stream  
+
+Note : When stream will work , it have built in mechanism to emit events 
+as per requirement
+
+-> data : will be auto emitted when piece of data will be fetched from file 
+& will be recursively called untill fetching gets completed
+
+-> end : will be auto emitted when , content reading from files gets
+ completed
+
+-> finish : will be auto emitted when content writing in files gets 
+completed
+
+-> error : will be auto emitted when problem in content reading or
+ writting is implemented     
+
+
+
+
+
+
+   
+
+
+
+
+
+ 

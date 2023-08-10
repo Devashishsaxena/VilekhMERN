@@ -1,0 +1,31 @@
+<html>
+<head>
+<title>Event Demo</title>
+<script>
+function addData()
+{
+ var a,b,c,res;  
+ a=document.getElementById("txta").value;
+ b=document.getElementById("txtb").value;
+ c=document.getElementById("txtc").value;
+ if(a=="")
+  a=0
+ if(b=="")
+  b=0
+ if(c=="")
+  c=0
+ res=parseInt(a)+parseInt(b)+parseInt(c);
+ document.getElementById("result").innerHTML=res;
+ document.getElementById("result1").value=res;
+}
+</script>
+</head>
+<body>
+<h1>Add Numbers</h1>
+Enter a <input onkeyup="addData()" type="text" id="txta" /><br/><br/>
+Enter b <input onkeyup="addData()" type="text" id="txtb" /><br/><br/>
+Enter c <input onkeyup="addData()" type="text" id="txtc" /><br/><br/> 
+<h2>Result : <span id="result"></span></h2>
+<input type="text" id="result1" placeholder="Result" />
+</body>
+</html>

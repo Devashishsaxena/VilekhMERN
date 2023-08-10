@@ -1,0 +1,48 @@
+Database : It is application level permanent storage capable to store data at application level , this storage will be accessible , manupulated as per requirement. It is used to deploy dynamicity at application level.
+
+-> SQL based database 
+-> NoSQL based database
+
+------------------------------------------------------
+
+MongoDB : 
+
+
+------------------------------------------------------
+
+SQL : It stands for structured query language , it is set of command used to access & manupulate database related implementations. Multiple database follows same approach for working MySQL , SQLlite3 ,...... 
+
+MySQL key points :-
+
+-> It is schema based database
+-> It follows relations like primary key , foreign key , joins
+-> Structure : database , table , rows , fields 
+
+Note : As it is structured database , it is capable to handle structured data in implementation , while it fails when it comes to work with unstructured data
+
+------------------------------------------------------
+
+NoSQL : It is NoSQL based database approch used to handle bulk amount of unstructured arbitary data at application level. Mongodb , cassandra , cloud.....
+
+Mongodb key points :-
+
+-> It is schema less database management system
+-> Entire working is done by using JS object hence considered as document oreinted database management system 
+-> As it is schemaless it do not follows SQL relations , i.e no keys , joins
+-> Structure : database , collections , document , fields 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 

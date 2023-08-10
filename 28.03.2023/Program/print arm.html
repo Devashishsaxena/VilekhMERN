@@ -1,0 +1,22 @@
+<script>
+    var n,i,r;
+    for(n=1;n<=999;n++)
+    {
+    //for(i=n; i!=0; i=parseInt(i/10))
+     //{
+        //r=i%10;
+        //sum=Math.pow(r,3)+sum;
+        sum=0;
+        i=n;
+        while(i!=0)
+        {
+            r=i%10;
+            sum=r*r*r*+sum;
+            i=parseInt(i/10); 
+        }
+     
+    if(sum==n)
+        document.write(n);
+    }
+ </script>
+    

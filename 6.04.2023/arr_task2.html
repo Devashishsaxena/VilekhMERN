@@ -1,0 +1,18 @@
+<script>
+//WAP to find min element in array
+var ar=[10,20,30,5,50,60,70];
+var n=ar[0];
+
+ar.map((x,i)=>{
+ if(n>ar[i])
+  n=ar[i];
+});
+
+/*ar.map((x)=>{
+ if(n>x)
+  n=x;
+});*/
+
+document.write("<h1>Min element = "+n+"</h1>");
+
+</script>

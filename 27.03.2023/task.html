@@ -1,0 +1,15 @@
+<script>
+var n=3487,d1,d2,d3,d4;
+
+d1=n%10;
+d2=parseInt(n/10)%10;
+d3=parseInt(n/100)%10;
+d4=parseInt(n/1000);
+
+var sum_digit=d1+d2+d3+d4;
+var avg_digit=sum_digit/4;
+
+document.write("<h1>Sum = "+sum_digit+"</h1>");
+document.write("<h1>Avg = "+avg_digit+"</h1>");
+
+</script>

@@ -1,0 +1,17 @@
+<script>
+//var keyword : used to create scopic parameter confined to block level (global , function)   
+
+var a=100;
+document.write("<h1>outside function a="+a+"</h1>");
+
+function demo()
+{
+ var b=200;
+ document.write("<h1>inside function a="+a+"</h1>");
+ document.write("<h1>inside function b="+b+"</h1>");
+}
+
+demo();
+document.write("<h1>outside function b="+b+"</h1>");
+
+</script>

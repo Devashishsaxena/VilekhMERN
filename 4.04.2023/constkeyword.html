@@ -1,0 +1,20 @@
+<script>
+//const keyword : used to create scopic parameter confined to block level (global , function)
+//apart from var const never change   
+
+const a=100;
+document.write("<h1>outside function a="+a+"</h1>");
+
+function demo()
+{
+ const b=200;
+ //Error
+ //a=1000; 
+ document.write("<h1>inside function a="+a+"</h1>");
+ document.write("<h1>inside function b="+b+"</h1>");
+}
+
+demo();
+document.write("<h1>outside function b="+b+"</h1>");
+
+</script>

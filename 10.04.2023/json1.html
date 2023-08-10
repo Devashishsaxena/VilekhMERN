@@ -1,0 +1,18 @@
+<script>
+
+var user=[{"uid":1001,"unm":"test@gmail.com","upass":123},
+{"uid":1002,"unm":"test1@gmail.com","upass":567},
+{"uid":1003,"unm":"test2@gmail.com","upass":231}];
+
+document.write("user details : "+user+"<br>");
+document.write("typeof user details : "+typeof user+"<br><br>");
+
+var user_json=JSON.stringify(user);
+document.write("user details json: "+user_json+"<br>");
+document.write("typeof user details json : "+typeof user_json+"<br><br>");
+
+var user_obj=JSON.parse(user_json);
+document.write("user details obj : "+user_obj+"<br>");
+document.write("typeof user details obj : "+typeof user_obj+"<br><br>");
+
+</script>

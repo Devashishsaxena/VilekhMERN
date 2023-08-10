@@ -1,0 +1,32 @@
+*
+{
+  margin:0;
+}
+#container
+{
+ height:622px;
+ width:100%;
+}
+
+
+
+
+#content
+{
+ height:55%;
+}
+
+#content_part1
+{
+ height:100%;
+ width:30%;
+ float:left;  
+}
+
+#content_part2
+{
+ height:100%;
+ width:70%;
+ float:left;  
+}
+

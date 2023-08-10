@@ -1,0 +1,52 @@
+Inheritance (is-a relationship) : It is an object oreinted feature which
+ signify sharing of properties & behaviour of one 
+ class in another class is inheritance , used to implement modularity 
+ at application level
+
+ERP : College resources
+Admin , Student , Accounts , Staff
+
+Each module will be implemented as class & used to deploy code reusability 
+& re-implementation
+
+                       is-a
+             Class A  <-----  Class B
+
+class A : Base - Parent - Super class 
+class B : Derived - Child - Sub class
+
+syntax :
+
+class Base
+{
+ data member
+ member methods 
+}
+
+class Derived extends Base
+{
+ data member
+ member methods 
+}
+
+Types of Inheritance :-
+
+-> Single level inheritance
+-> Multilevel level inheritance
+-> Hierarchical inheritance
+-> Multiple inheritance
+-> Hybrid inheritance
+
+Note : In case of multiple inheritance , multiple base class 
+provides property to single derived class , in this case if 
+multiple base contain data or functionality with same name is 
+considered as ambiguity problem
+
+class A
+          <------- class C 
+class B  
+
+* Due to ambiguity problem , multiple inheritance is not supported
+* To implement interface Typescript is used       
+
+-------------------------------------------------------

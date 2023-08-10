@@ -1,0 +1,48 @@
+ES6 : It is ECMA script standard which was launched in year 2015 & all above versions follow same approach to write code blocks
+
+ES5 <= : @2014 -> object based OO
+
+ES6 >= : @2015 -> class based OO
+
+Latest version : @2022 ES13
+
+-------------------------------------------------------
+
+ES6 Features :-
+
+-> Use strict is default enable & hoisting is implemented
+
+-> Implementation of let , const like cases
+
+-> Implementation of arrow function
+
+-> Implementation of rest & spread operator (...)
+
+-> It is class based object oreinted in nature
+
+-> Follows all oops features : Encapsulation , Abstraction , Polymorphism & Inheritance
+
+-> Transpilers & Transpilation : Transpilation is a process to convert ES6 compatible code to ES5 compatible code & module which make conversion is transpiler
+babel : transpiler (task runner) 
+webpack : task bundeller
+		     execute 
+      source code --------------> platform	
+	 (ES5)               (browser,node env)
+
+	
+         transpilation    execute  
+ source    ---->    ES5    ---->   platform
+  code             	       
+ (ES6)                       (browser,node env)
+
+
+
+
+
+
+
+
+
+
+
+     

@@ -1,0 +1,77 @@
+Functions : This are block of code which will be executed when it is called , it is used to deploy code reusability i.e write once & run any number of times. As JS is fully object oriented hence function is also considered as reference.
+              
+Types of functions : On the basis of function implementation , function are of following types :-
+
+-> Default function
+
+syntax :
+function function_name(args)    -> if any
+{
+ statements
+ return value -> if any
+}
+
+calling syntax : function_name()
+
+------------------------------------------------------
+
+-> Anonymous or Variable function
+
+syntax :
+
+var function_name=function(args){    -> if any
+ statements
+ return value -> if any
+}
+
+calling syntax : function_name()
+
+------------------------------------------------------
+
+-> Arrow or Expression function
+
+syntax :
+
+var function_name=(args)=>{    -> if any
+ statements
+ return value -> if any
+}
+
+calling syntax : function_name()
+
+------------------------------------------------------
+
+-> Fat arrow or Lamda expression function
+
+syntax :
+
+((args)=>{
+ statements;
+})();
+
+key points :-
+
+* it will be executed where it is created
+* it will be auto invoked , no need of explicit calling
+* cannot return value
+* used to supply function as arguments
+
+------------------------------------------------------
+
+-> Callback function
+-> Prototype function
+
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+
+Classification of function : On the basis of arguments & return value functions are classified
+
+-> function without arguments & without return value
+-> function with arguments & without return value
+-> function without arguments & with return value
+-> function with arguments & with return value
+
+
+
+
+ 

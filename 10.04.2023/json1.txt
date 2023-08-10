@@ -1,0 +1,23 @@
+JS OBJECT :-> To access the object one in manual access or for in access
+JS NESTED COLLECTION :-> 
+JSON : It stands for Javascript object notation
+
+key points :-
+
+-> It is light weight proccess , i.e it is easy to transfer , handle & manage 
+
+-> It is string formatted notation of JS object
+
+-> Used to transfer data from one application end to another web-web , web-api , web-mobile
+
+-> Compatible with almost all major technologies of real world 
+
+CONVERSION FUNCTION :-> 
+
+JSON.parse(json.data) :-> Used to convert String to Object
+JSON.stringyfy(json.data) :-> Used to convert Object to String
+
+json viewer : http://jsonviewer.stack.hu/
+
+json api : https://jsonplaceholder.typicode.com/
+

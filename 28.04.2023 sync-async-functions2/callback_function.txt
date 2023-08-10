@@ -1,0 +1,12 @@
+Callback Functions : Functions are block of code which will be executed when it is called , on execution function have capacity to return value.
+
+Function executed in response of execution of another function is callback function
+
+Note : 
+
+-> By default callback function is sync in nature , by default max callback are implemented async as per requirement.
+
+-> As max callback have asynchronous implementations , while when multiple callback are used it is possible that async responses may overlap each other & callback chaning is another problem with callback functions with leads to generate 'callback hell' problem.
+
+-> To overcome callback hell 'Promise' is used
+   

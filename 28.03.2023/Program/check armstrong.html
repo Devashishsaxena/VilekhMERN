@@ -1,0 +1,14 @@
+<script>
+    var n=prompt("enter n");
+    var i,a=0,sum=0,p=1;
+    for(i=n;i>0;i=parseInt(i/10))
+    {
+        a++;
+    }
+    for(i=n;i>0;i=parseInt(i/10))
+        {    
+        r=i%10;
+        sum=sum+math.pow(r,a); 
+        }
+    document.write(sum);
+    </script>

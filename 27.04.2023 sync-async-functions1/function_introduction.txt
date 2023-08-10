@@ -1,0 +1,28 @@
+Synchronous or Blocking Functions & Asynchronous or Non-Blocking Functions :- 
+It is function classification on the basis of its working style.
+
+-> Synchronous or Blocking Functions : Functions are block of code which will be executed 
+when it is called , function independent of time taken for execution will wait & once 
+execution is completed next proccess will be executed. Considered as synchronous or 
+Blocking function
+
+-> Asynchronous or Non-Blocking Functions : Functions are block of code which will be executed
+ when it is called , function which on execution will not intrupt further proccess from 
+ execution is asynchronous or Non-blocking function
+
+Note : -> By default all functions are synchronous in nature , only callback 
+function is manually implemented asynchronous in nature
+
+-> By default NodeJS is unithreaded in nature , by the implementation of 
+Asynchronous function node becomes multithreaded  
+
+-----------------
+----------------- p1
+----------------- 
+      | |
+      | | p2 (function defination & calling)
+      |	| 
+-----------------
+----------------- p3
+----------------- 
+

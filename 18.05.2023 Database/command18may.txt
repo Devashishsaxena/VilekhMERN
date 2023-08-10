@@ -1,0 +1,418 @@
+(base) administrator@LAP4:~$ sudo service mongod start
+[sudo] password for administrator: 
+(base) administrator@LAP4:~$ mongo
+MongoDB shell version v4.0.28
+connecting to: mongodb://127.0.0.1:27017/?gssapiServiceName=mongodb
+Implicit session: session { "id" : UUID("21248a99-cdbb-42ea-995a-6aa05d029e0a") }
+MongoDB server version: 4.0.28
+Server has startup warnings: 
+2023-05-18T08:55:06.450+0530 I STORAGE  [initandlisten] 
+2023-05-18T08:55:06.450+0530 I STORAGE  [initandlisten] ** WARNING: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine
+2023-05-18T08:55:06.450+0530 I STORAGE  [initandlisten] **          See http://dochub.mongodb.org/core/prodnotes-filesystem
+2023-05-18T08:55:07.970+0530 I CONTROL  [initandlisten] 
+2023-05-18T08:55:07.970+0530 I CONTROL  [initandlisten] ** WARNING: Access control is not enabled for the database.
+2023-05-18T08:55:07.970+0530 I CONTROL  [initandlisten] **          Read and write access to data and configuration is unrestricted.
+2023-05-18T08:55:07.970+0530 I CONTROL  [initandlisten] 
+---
+Enable MongoDB's free cloud-based monitoring service, which will then receive and display
+metrics about your deployment (disk utilization, CPU, operation statistics, etc).
+
+The monitoring data will be available on a MongoDB website with a unique URL accessible to you
+and anyone you share the URL with. MongoDB may use this information to make product
+improvements and to suggest MongoDB products and deployment options to you.
+
+To enable free monitoring, run the following command: db.enableFreeMonitoring()
+To permanently disable this reminder, run the following command: db.disableFreeMonitoring()
+---
+
+> 
+> show dbs
+SMT                   0.000GB
+admin                 0.000GB
+checkdb               0.000GB
+config                0.000GB
+eAuction              0.000GB
+local                 0.000GB
+mernstackbatch89      0.000GB
+porter                0.000GB
+postkrde              0.000GB
+reactbatch1011-28nov  0.000GB
+reactbatch910         0.000GB
+roomrent              0.000GB
+scrapauction          0.000GB
+stackbatch1011        0.000GB
+stackbatch1112-22feb  0.000GB
+stackbatch24-30dec    0.000GB
+stackbatch45          0.000GB
+stackbatch89-11apr    0.000GB
+stackbatch89-8dec     0.000GB
+stackbatch89-checck   0.000GB
+stackbatch910-17jan   0.000GB
+stackbatch910-17may   0.000GB
+test                  0.000GB
+testdb                0.000GB
+> use stackbatch910-17may
+switched to db stackbatch910-17may
+> show collections
+data
+data1
+> 
+> db.data.find().pretty()
+{
+	"_id" : ObjectId("64645a6501ccffe15a8f5607"),
+	"rno" : 1001,
+	"name" : "jarvis",
+	"phy" : 56,
+	"che" : 67,
+	"mat" : 78
+}
+{
+	"_id" : ObjectId("64645a7b01ccffe15a8f5608"),
+	"rno" : 1002,
+	"name" : "jany",
+	"phy" : 16,
+	"che" : 61,
+	"mat" : 17
+}
+{
+	"_id" : ObjectId("64645aaf01ccffe15a8f5609"),
+	"rno" : 1003,
+	"name" : "john",
+	"phy" : 61,
+	"che" : 91,
+	"mat" : 87
+}
+{
+	"_id" : ObjectId("64645aaf01ccffe15a8f560a"),
+	"rno" : 1004,
+	"name" : "peter",
+	"phy" : 98,
+	"che" : 1,
+	"mat" : 71
+}
+{
+	"_id" : ObjectId("64645b1101ccffe15a8f560b"),
+	"rno" : 1005,
+	"name" : "test",
+	"phy" : 6,
+	"che" : 9,
+	"mat" : 7
+}
+{
+	"_id" : ObjectId("64645b9a01ccffe15a8f560c"),
+	"rno" : 1006,
+	"name" : "jay",
+	"phy" : 18,
+	"che" : 80,
+	"mat" : 55
+}
+{
+	"_id" : ObjectId("64645b9a01ccffe15a8f560d"),
+	"rno" : 1007,
+	"name" : "test4",
+	"phy" : 18,
+	"che" : 92,
+	"mat" : 75
+}
+{
+	"_id" : ObjectId("64645c1701ccffe15a8f560e"),
+	"rno" : 1008,
+	"name" : "test",
+	"mat" : 7
+}
+> db.data.find().pretty()
+> db.data.find().sort()
+Error: error: {
+	"ok" : 0,
+	"errmsg" : "Failed to parse: sort: undefined. 'sort' field must be of BSON type object.",
+	"code" : 9,
+	"codeName" : "FailedToParse"
+}
+> db.data.find().sort({"mat":1})
+
+
+
+
+
+
+
+
+
+> db.data.find().sort({"mat":1})
+{ "_id" : ObjectId("64645b1101ccffe15a8f560b"), "rno" : 1005, "name" : "test", "phy" : 6, "che" : 9, "mat" : 7 }
+{ "_id" : ObjectId("64645c1701ccffe15a8f560e"), "rno" : 1008, "name" : "test", "mat" : 7 }
+{ "_id" : ObjectId("64645a7b01ccffe15a8f5608"), "rno" : 1002, "name" : "jany", "phy" : 16, "che" : 61, "mat" : 17 }
+{ "_id" : ObjectId("64645b9a01ccffe15a8f560c"), "rno" : 1006, "name" : "jay", "phy" : 18, "che" : 80, "mat" : 55 }
+{ "_id" : ObjectId("64645aaf01ccffe15a8f560a"), "rno" : 1004, "name" : "peter", "phy" : 98, "che" : 1, "mat" : 71 }
+{ "_id" : ObjectId("64645b9a01ccffe15a8f560d"), "rno" : 1007, "name" : "test4", "phy" : 18, "che" : 92, "mat" : 75 }
+{ "_id" : ObjectId("64645a6501ccffe15a8f5607"), "rno" : 1001, "name" : "jarvis", "phy" : 56, "che" : 67, "mat" : 78 }
+{ "_id" : ObjectId("64645aaf01ccffe15a8f5609"), "rno" : 1003, "name" : "john", "phy" : 61, "che" : 91, "mat" : 87 }
+> db.data.find().sort({"mat":-1})
+> db.data.find().sort({"mat":-1})
+{ "_id" : ObjectId("64645aaf01ccffe15a8f5609"), "rno" : 1003, "name" : "john", "phy" : 61, "che" : 91, "mat" : 87 }
+{ "_id" : ObjectId("64645a6501ccffe15a8f5607"), "rno" : 1001, "name" : "jarvis", "phy" : 56, "che" : 67, "mat" : 78 }
+{ "_id" : ObjectId("64645b9a01ccffe15a8f560d"), "rno" : 1007, "name" : "test4", "phy" : 18, "che" : 92, "mat" : 75 }
+{ "_id" : ObjectId("64645aaf01ccffe15a8f560a"), "rno" : 1004, "name" : "peter", "phy" : 98, "che" : 1, "mat" : 71 }
+{ "_id" : ObjectId("64645b9a01ccffe15a8f560c"), "rno" : 1006, "name" : "jay", "phy" : 18, "che" : 80, "mat" : 55 }
+{ "_id" : ObjectId("64645a7b01ccffe15a8f5608"), "rno" : 1002, "name" : "jany", "phy" : 16, "che" : 61, "mat" : 17 }
+{ "_id" : ObjectId("64645b1101ccffe15a8f560b"), "rno" : 1005, "name" : "test", "phy" : 6, "che" : 9, "mat" : 7 }
+{ "_id" : ObjectId("64645c1701ccffe15a8f560e"), "rno" : 1008, "name" : "test", "mat" : 7 }
+> 
+> db.data.find().limit(1)
+{ "_id" : ObjectId("64645a6501ccffe15a8f5607"), "rno" : 1001, "name" : "jarvis", "phy" : 56, "che" : 67, "mat" : 78 }
+> db.data.find().limit(2)
+{ "_id" : ObjectId("64645a6501ccffe15a8f5607"), "rno" : 1001, "name" : "jarvis", "phy" : 56, "che" : 67, "mat" : 78 }
+{ "_id" : ObjectId("64645a7b01ccffe15a8f5608"), "rno" : 1002, "name" : "jany", "phy" : 16, "che" : 61, "mat" : 17 }
+> db.data.find().sort()
+
+
+
+
+
+
+
+
+
+> db.data.find()
+{ "_id" : ObjectId("64645a6501ccffe15a8f5607"), "rno" : 1001, "name" : "jarvis", "phy" : 56, "che" : 67, "mat" : 78 }
+{ "_id" : ObjectId("64645a7b01ccffe15a8f5608"), "rno" : 1002, "name" : "jany", "phy" : 16, "che" : 61, "mat" : 17 }
+{ "_id" : ObjectId("64645aaf01ccffe15a8f5609"), "rno" : 1003, "name" : "john", "phy" : 61, "che" : 91, "mat" : 87 }
+{ "_id" : ObjectId("64645aaf01ccffe15a8f560a"), "rno" : 1004, "name" : "peter", "phy" : 98, "che" : 1, "mat" : 71 }
+{ "_id" : ObjectId("64645b1101ccffe15a8f560b"), "rno" : 1005, "name" : "test", "phy" : 6, "che" : 9, "mat" : 7 }
+{ "_id" : ObjectId("64645b9a01ccffe15a8f560c"), "rno" : 1006, "name" : "jay", "phy" : 18, "che" : 80, "mat" : 55 }
+{ "_id" : ObjectId("64645b9a01ccffe15a8f560d"), "rno" : 1007, "name" : "test4", "phy" : 18, "che" : 92, "mat" : 75 }
+{ "_id" : ObjectId("64645c1701ccffe15a8f560e"), "rno" : 1008, "name" : "test", "mat" : 7 }
+> 
+> db.data.find().sort({"che":-1})
+{ "_id" : ObjectId("64645b9a01ccffe15a8f560d"), "rno" : 1007, "name" : "test4", "phy" : 18, "che" : 92, "mat" : 75 }
+{ "_id" : ObjectId("64645aaf01ccffe15a8f5609"), "rno" : 1003, "name" : "john", "phy" : 61, "che" : 91, "mat" : 87 }
+{ "_id" : ObjectId("64645b9a01ccffe15a8f560c"), "rno" : 1006, "name" : "jay", "phy" : 18, "che" : 80, "mat" : 55 }
+{ "_id" : ObjectId("64645a6501ccffe15a8f5607"), "rno" : 1001, "name" : "jarvis", "phy" : 56, "che" : 67, "mat" : 78 }
+{ "_id" : ObjectId("64645a7b01ccffe15a8f5608"), "rno" : 1002, "name" : "jany", "phy" : 16, "che" : 61, "mat" : 17 }
+{ "_id" : ObjectId("64645b1101ccffe15a8f560b"), "rno" : 1005, "name" : "test", "phy" : 6, "che" : 9, "mat" : 7 }
+{ "_id" : ObjectId("64645aaf01ccffe15a8f560a"), "rno" : 1004, "name" : "peter", "phy" : 98, "che" : 1, "mat" : 71 }
+{ "_id" : ObjectId("64645c1701ccffe15a8f560e"), "rno" : 1008, "name" : "test", "mat" : 7 }
+> 
+> db.data.find().sort({"che":-1}).limit(1)
+{ "_id" : ObjectId("64645b9a01ccffe15a8f560d"), "rno" : 1007, "name" : "test4", "phy" : 18, "che" : 92, "mat" : 75 }
+> db.data.find().sort({"che":-1}).limit(1).pretty()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+> db.data.find().sort({"che":-1}).limit(1).pretty()
+{
+	"_id" : ObjectId("64645b9a01ccffe15a8f560d"),
+	"rno" : 1007,
+	"name" : "test4",
+	"phy" : 18,
+	"che" : 92,
+	"mat" : 75
+}
+> db.data.find({},{"_id":0,"rno":1,"name":1}).sort({"che":-1}).limit(1).pretty()
+{ "rno" : 1007, "name" : "test4" }
+> 
+
+
+
+
+
+> db.data.find()
+{ "_id" : ObjectId("64645a6501ccffe15a8f5607"), "rno" : 1001, "name" : "jarvis", "phy" : 56, "che" : 67, "mat" : 78 }
+{ "_id" : ObjectId("64645a7b01ccffe15a8f5608"), "rno" : 1002, "name" : "jany", "phy" : 16, "che" : 61, "mat" : 17 }
+{ "_id" : ObjectId("64645aaf01ccffe15a8f5609"), "rno" : 1003, "name" : "john", "phy" : 61, "che" : 91, "mat" : 87 }
+{ "_id" : ObjectId("64645aaf01ccffe15a8f560a"), "rno" : 1004, "name" : "peter", "phy" : 98, "che" : 1, "mat" : 71 }
+{ "_id" : ObjectId("64645b1101ccffe15a8f560b"), "rno" : 1005, "name" : "test", "phy" : 6, "che" : 9, "mat" : 7 }
+{ "_id" : ObjectId("64645b9a01ccffe15a8f560c"), "rno" : 1006, "name" : "jay", "phy" : 18, "che" : 80, "mat" : 55 }
+{ "_id" : ObjectId("64645b9a01ccffe15a8f560d"), "rno" : 1007, "name" : "test4", "phy" : 18, "che" : 92, "mat" : 75 }
+{ "_id" : ObjectId("64645c1701ccffe15a8f560e"), "rno" : 1008, "name" : "test", "mat" : 7 }
+> 
+> db.data.find().pretty()
+{
+	"_id" : ObjectId("64645a6501ccffe15a8f5607"),
+	"rno" : 1001,
+	"name" : "jarvis",
+	"phy" : 56,
+	"che" : 67,
+	"mat" : 78
+}
+{
+	"_id" : ObjectId("64645a7b01ccffe15a8f5608"),
+	"rno" : 1002,
+	"name" : "jany",
+	"phy" : 16,
+	"che" : 61,
+	"mat" : 17
+}
+{
+	"_id" : ObjectId("64645aaf01ccffe15a8f5609"),
+	"rno" : 1003,
+	"name" : "john",
+	"phy" : 61,
+	"che" : 91,
+	"mat" : 87
+}
+{
+	"_id" : ObjectId("64645aaf01ccffe15a8f560a"),
+	"rno" : 1004,
+	"name" : "peter",
+	"phy" : 98,
+	"che" : 1,
+	"mat" : 71
+}
+{
+	"_id" : ObjectId("64645b1101ccffe15a8f560b"),
+	"rno" : 1005,
+	"name" : "test",
+	"phy" : 6,
+	"che" : 9,
+	"mat" : 7
+}
+{
+	"_id" : ObjectId("64645b9a01ccffe15a8f560c"),
+	"rno" : 1006,
+	"name" : "jay",
+	"phy" : 18,
+	"che" : 80,
+	"mat" : 55
+}
+{
+	"_id" : ObjectId("64645b9a01ccffe15a8f560d"),
+	"rno" : 1007,
+	"name" : "test4",
+	"phy" : 18,
+	"che" : 92,
+	"mat" : 75
+}
+{
+	"_id" : ObjectId("64645c1701ccffe15a8f560e"),
+	"rno" : 1008,
+	"name" : "test",
+	"mat" : 7
+}
+> 
+> db.data.insert({"_id":1009,"name":"aaa","phy":56,"che":78,"mat":54})
+WriteResult({ "nInserted" : 1 })
+> db.data.find({"_id":1009}).pretty()
+{ "_id" : 1009, "name" : "aaa", "phy" : 56, "che" : 78, "mat" : 54 }
+> db.data.find({"_id":1009}).pretty()
+{ "_id" : 1009, "name" : "aaa", "phy" : 56, "che" : 78, "mat" : 54 }
+> db.data.insert({"_id":1009,"name":"aaa","phy":56,"che":78,"mat":54})
+WriteResult({
+	"nInserted" : 0,
+	"writeError" : {
+		"code" : 11000,
+		"errmsg" : "E11000 duplicate key error collection: stackbatch910-17may.data index: _id_ dup key: { : 1009.0 }"
+	}
+})
+> 
+> db.empDetails.insert({"eno":1001,"esmon":"jan","esal":10000})
+
+WriteResult({ "nInserted" : 1 })
+> show collections
+data
+data1
+empDetails
+> db.empDetails.insert({"eno":1002,"esmon":"jan","esal":12000})
+
+WriteResult({ "nInserted" : 1 })
+> db.empDetails.insert({"eno":1001,"esmon":"feb","esal":11000})
+
+WriteResult({ "nInserted" : 1 })
+> db.empDetails.insert({"eno":1002,"esmon":"feb","esal":12500})
+
+WriteResult({ "nInserted" : 1 })
+> db.empDetails.insert({"eno":1001,"esmon":"mar","esal":15000})
+
+WriteResult({ "nInserted" : 1 })
+> db.empDetails.insert({"eno":1002,"esmon":"mar","esal":13500})
+
+WriteResult({ "nInserted" : 1 })
+> db.empDetails.insert({"eno":1003,"esmon":"mar","esal":20000})
+
+WriteResult({ "nInserted" : 1 })
+> 
+> db.empDetails.find()
+{ "_id" : ObjectId("6465adbca40b61886a6f2c59"), "eno" : 1001, "esmon" : "jan", "esal" : 10000 }
+{ "_id" : ObjectId("6465addea40b61886a6f2c5a"), "eno" : 1002, "esmon" : "jan", "esal" : 12000 }
+{ "_id" : ObjectId("6465adeca40b61886a6f2c5b"), "eno" : 1001, "esmon" : "feb", "esal" : 11000 }
+{ "_id" : ObjectId("6465adf4a40b61886a6f2c5c"), "eno" : 1002, "esmon" : "feb", "esal" : 12500 }
+{ "_id" : ObjectId("6465adffa40b61886a6f2c5d"), "eno" : 1001, "esmon" : "mar", "esal" : 15000 }
+{ "_id" : ObjectId("6465ae07a40b61886a6f2c5e"), "eno" : 1002, "esmon" : "mar", "esal" : 13500 }
+{ "_id" : ObjectId("6465ae0fa40b61886a6f2c5f"), "eno" : 1003, "esmon" : "mar", "esal" : 20000 }
+> 
+
+
+> db.empDetails.aggregate({$group: { _id:"$eno", totalsalary: { $sum: "$esal" } }})
+{ "_id" : 1003, "totalsalary" : 20000 }
+{ "_id" : 1002, "totalsalary" : 38000 }
+{ "_id" : 1001, "totalsalary" : 36000 }
+> db.empDetails.aggregate({$group: { _id:"$eno", totalsalary: { $avg: "$esal" }}})
+{ "_id" : 1003, "totalsalary" : 20000 }
+{ "_id" : 1002, "totalsalary" : 12666.666666666666 }
+{ "_id" : 1001, "totalsalary" : 12000 }
+> db.empDetails.aggregate({$group: { _id:"$eno", totalsalary: { $max: "$esal" }}})
+{ "_id" : 1003, "totalsalary" : 20000 }
+{ "_id" : 1002, "totalsalary" : 13500 }
+{ "_id" : 1001, "totalsalary" : 15000 }
+> db.empDetails.aggregate({$group: { _id:"$eno", totalsalary: { $min: "$esal" }}})
+{ "_id" : 1003, "totalsalary" : 20000 }
+{ "_id" : 1002, "totalsalary" : 12000 }
+{ "_id" : 1001, "totalsalary" : 10000 }
+> db.empDetails.aggregate({$group: { _id:"$eno", totalsalary: { $first: "$esal" }}})
+> db.empDetails.aggregate({$group: { _id:"$eno", totalsalary: { $first: "$esal" }}})
+{ "_id" : 1003, "totalsalary" : 20000 }
+{ "_id" : 1002, "totalsalary" : 12000 }
+{ "_id" : 1001, "totalsalary" : 10000 }
+> db.empDetails.aggregate({$group: { _id:"$eno", totalsalary: { $last: "$esal" }}})
+{ "_id" : 1003, "totalsalary" : 20000 }
+{ "_id" : 1002, "totalsalary" : 13500 }
+{ "_id" : 1001, "totalsalary" : 15000 }
+> 
+
+
+
+
+
+
+
+> db.data.find()
+{ "_id" : ObjectId("64645a6501ccffe15a8f5607"), "rno" : 1001, "name" : "jarvis", "phy" : 56, "che" : 67, "mat" : 78 }
+{ "_id" : ObjectId("64645a7b01ccffe15a8f5608"), "rno" : 1002, "name" : "jany", "phy" : 16, "che" : 61, "mat" : 17 }
+{ "_id" : ObjectId("64645aaf01ccffe15a8f5609"), "rno" : 1003, "name" : "john", "phy" : 61, "che" : 91, "mat" : 87 }
+{ "_id" : ObjectId("64645aaf01ccffe15a8f560a"), "rno" : 1004, "name" : "peter", "phy" : 98, "che" : 1, "mat" : 71 }
+{ "_id" : ObjectId("64645b1101ccffe15a8f560b"), "rno" : 1005, "name" : "test", "phy" : 6, "che" : 9, "mat" : 7 }
+{ "_id" : ObjectId("64645b9a01ccffe15a8f560c"), "rno" : 1006, "name" : "jay", "phy" : 18, "che" : 80, "mat" : 55 }
+{ "_id" : ObjectId("64645b9a01ccffe15a8f560d"), "rno" : 1007, "name" : "test4", "phy" : 18, "che" : 92, "mat" : 75 }
+{ "_id" : ObjectId("64645c1701ccffe15a8f560e"), "rno" : 1008, "name" : "test", "mat" : 7 }
+{ "_id" : 1009, "name" : "aaa", "phy" : 56, "che" : 78, "mat" : 54 }
+> 
+> db.data.createIndex({"name":1})
+{
+	"createdCollectionAutomatically" : false,
+	"numIndexesBefore" : 1,
+	"numIndexesAfter" : 2,
+	"ok" : 1
+}
+> db.data.dropIndex({"name":1})
+{ "nIndexesWas" : 2, "ok" : 1 }
+> 
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,14 @@
+<script>
+var emp=[{"eno":1001,"enm":"jarvis","esal":10000.67},{"eno":1002,"enm":"jany","esal":20000.70},{"eno":1003,"enm":"john","esal":30000.9}];
+
+document.write("<h1>Employee Details Loop Access</h1>");
+
+emp.map((row)=>{
+ Object.keys(row).map((k)=>{
+  document.write(k+"---->"+row[k]+"<br>");		
+ }); 
+ document.write("<br>");
+});
+
+
+</script>

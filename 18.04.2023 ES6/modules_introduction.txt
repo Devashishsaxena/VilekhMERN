@@ -1,0 +1,37 @@
+Modules or Dependency : It is a collection capable to store data refrences , function & classes or prototypes. This is used to deploy code reusability (write once & run any number of times) & re-implementation.
+
+This modules can be linked at application level as required , if not required they can be removed.
+
+-------------------------------------------------------
+
+Types of Modules :-
+
+1) Custom or User defined modules : those module which are created as per users requirement
+
+2) Predefined or Builtin modules : those modules which are available by default are predefined
+
+-------------------------------------------------------
+-------------------------------------------------------
+
+Depending on avaibility builtin modules are further classified :-
+
+Level 1 : Application level non installable dependency , this modules are available in node environment. Eg: fs , events , http , url , path....
+
+Level 2 : Application level installable dependency , this modules are available on NPM. Eg: express , express-session , express-fileupload....
+
+command : npm install <package_name>
+
+Level 3 : Global dependency : not linked at application level but added in environment. Eg: nodemon , create-react-app , @angular/cli 
+
+npm install <package_name> -g
+
+-------------------------------------------------------
+-------------------------------------------------------
+
+
+
+
+
+
+
+

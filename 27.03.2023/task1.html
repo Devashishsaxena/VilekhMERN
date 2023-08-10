@@ -1,0 +1,40 @@
+<script>
+var amt=49999;
+
+var n1000=parseInt(amt/1000);
+amt%=1000;
+
+var n500=parseInt(amt/500);
+amt%=500;
+
+var n100=parseInt(amt/100);
+amt%=100;
+
+var n50=parseInt(amt/50);
+amt%=50;
+
+var n20=parseInt(amt/20);
+amt%=20;
+
+var n10=parseInt(amt/10);
+amt%=10;
+
+var n5=parseInt(amt/5);
+amt%=5;
+
+var n2=parseInt(amt/2);
+var n1=amt%2;
+
+document.write("<h1>Currency Denominations :-</h1>");
+
+document.write("Rs.1000 denomination : "+n1000+"<br>");
+document.write("Rs.500 denomination : "+n500+"<br>");
+document.write("Rs.100 denomination : "+n100+"<br>");
+document.write("Rs.50 denomination : "+n50+"<br>");
+document.write("Rs.20 denomination : "+n20+"<br>");
+document.write("Rs.10 denomination : "+n10+"<br>");
+document.write("Rs.5 denomination : "+n5+"<br>");
+document.write("Rs.2 denomination : "+n2+"<br>");
+document.write("Rs.1 denomination : "+n1+"<br>");
+
+</script>

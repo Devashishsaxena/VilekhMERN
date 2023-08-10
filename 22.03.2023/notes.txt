@@ -1,0 +1,153 @@
+ Software :-> Software is set of programs
+Program :-> Program is set of instruction
+
+or
+
+a software is an interface(bridge) used to connect user with a service provider
+
+eg: facebook (web , mobile app)
+user : we are users
+service provider: is facebook
+
+classification of software:
+
+1) system software : This software are used to enable 
+machine hardware part to perform operation are
+system software.
+
+eg: 
+
+i) Operating system
+ii) Drivers
+iii) All utility related software
+
+technology: c , c++
+
+------------------------------------------------------
+------------------------------------------------------
+
+2) Application software : This are user defined 
+software (those software which are generated as per users requirement)
+
+eg: 
+
+i) mobile app
+ii) android
+iii) add two numbers
+
+-> Types of application software: application software are classified on the basis of platform on which they are implemented
+
+* Console based application
+
+-> This application are implemented on OS
+-> Working is done on the basis of commands
+-> Non user freindly
+-> Fast in accessibility 
+
+Tech: c/c++ , Python , NodeJS 
+
+eg:
+-> System console
+-> Billing desk / ticket booking system  
+
+------------------------------------------------
+
+* Desktop based application
+
+-> This application are implemented on OS
+-> This are standalone applications
+-> This are locally accissible application
+
+Tech : JAVA , .NET , Python
+
+eg:
+-> antivirus
+-> MS Office
+-> Libre Office 
+-> Gaming Application  
+
+-------------------------------------------------------
+
+* Web based application
+
+-> This are globally accessible application
+-> Accessed via web(www)
+-> User freindly application
+
+Tech : jsp , asp , django , flask , ROR , MEAN stack , MERN stack , PHP
+
+eg:
+-> facebook
+-> flipkart
+-> amazon
+-> university application 
+
+------------------------------------------------
+
+* Mobile based application
+
+-> This application are implemented on mobile OS
+-> Mobile apps
+
+Tech : Android , IOS , Hybrid apps(IONIC , 
+React Native)
+
+JS :-
+
+* Angular/Cli -> IONIC
+* ReactJS -> React Native
+
+eg:
+-> facebook app
+-> flipkart app
+
+----------------------------------------------------
+
+Application:
+
+-> console : 10%
+-> desktop : 20%
+-> web : 40%
+-> mobile : 30%
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	 
+ 
+
+
+ 
+ 
+

@@ -1,0 +1,26 @@
+OOPS Features :-
+
+Abstraction : It is an object oreinted feature , which is used to deploy application level security by making application level data secure & functionality globally accessible. 
+
+Note : In ES6 abstraction is all about nomenculature (naming conventions), it doesnot support keywords like public , private & protected (suppoted in TS)
+
+a : data member , aData() : method
+
+case I : public member - a , aData() 
+
+case II : private member - #a , #aData() 
+
+
+
+
+
+------------------------------------------------
+
+Encapsulation : It is an object oreinted feature which signify wrapping of data & functionality into a single unit is termed as encapsulation.
+
+Note : In OOP'S object carry encapsulation
+
+------------------------------------------------
+
+
+ 

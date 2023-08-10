@@ -1,0 +1,32 @@
+<script>
+  var n = 8, res;
+function printTable(n)
+{
+ for(let i=1;i<=10;i++)
+  document.write(n+"*"+i+"="+(n*i)+"<br>");
+}
+
+function printFactorial(n)
+{
+ var f=1;
+ for(let i=2;i<=n;i++)
+  f*=i;
+ document.write("Factorial : "+f+"<br>");
+}
+
+function checkEvenOdd(n)
+{
+ if(n%2==0)
+  return true;
+ else
+  return false; 
+}
+
+
+res=checkEvenOdd(n);
+if(res)
+ printTable(n);
+else
+ printFactorial(n)
+
+</script>

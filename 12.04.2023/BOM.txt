@@ -1,0 +1,10 @@
+BOM (Browser Object Model) :-> It Standards for Browser Object Model . It collection of 
+object to given by javascrpit to access browser related  properties.
+
+Windows 
+
+-> Document
+-> History
+-> Screen
+-> Navigator
+-> Location

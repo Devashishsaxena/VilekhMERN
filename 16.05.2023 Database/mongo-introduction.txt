@@ -1,0 +1,29 @@
+MongoDB : It is NoSQL based database , used to manage bulk amount of unstructured data at application level. As this storage is unstructured entire data will be manages by using JS objects (JSON)
+
+key points :-
+
+-> Schema less DBMS
+-> Entire data will be manages by using JS object hence considered as document oreinted DBMS
+(document : it is JS object)
+-> As schema less do not implements relations & joins like cases
+-> Structure
+
+* Database : It is virtual storage , which will come in existance as data is stored 
+
+* Collections : Instead of table , mongodb have collections which store data as documents
+
+* Documents : It is JS object used to store data as key:value pair , each document of collection may contain different-different keys
+
+* fields : this are key of documents
+
+eg : {key1:value1,key2:value2,......,keyn:valuen}; -> document
+
+key1 , key2 , keyn -> fields
+
+
+
+
+
+
+
+

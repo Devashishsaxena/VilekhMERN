@@ -1,0 +1,22 @@
+
+
+<script>
+//WAP to create 10 element array , in which
+//element at odd index must be added
+//element at even index value must be printed
+
+var ar=[10,20,30,40,50,60,70,80,90,100];
+document.write("<h1>Element at even index</h1>");
+var s=0;
+for(let i in ar)
+{
+ if(i%2==0)
+  document.write(ar[i]+"<br>");
+ else
+  s+=ar[i]; 
+} 
+
+document.write("<h1>Sum of element at odd index = "+s+"</h1>"); 
+
+</script>
+
